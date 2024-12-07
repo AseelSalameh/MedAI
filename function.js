@@ -5,12 +5,13 @@ let answers = []; //answers will be stored in this Array.
 //questions flow after patient answer
 function nextQuestion(answer){
 
-    answers.push(answer);
     console.log('User selected:',answer);
 
-    const questions = document.getElementById("questtions");
+    answers.push(answer);
 
-    //conditions to change the question after the patient(user)  answer
+    const questions = document.getElementById("questions");
+
+    //conditions to change the question after the patient(user) answer
     if (answer=== 'New symptoms'){
         questions.innerHTML = `<p>What is your primary symptom?</p>
         <button onclick="nextQuestion('Headache')">Headache</button>
@@ -18,21 +19,21 @@ function nextQuestion(answer){
         <button onclick="nextQuestion('Fatigue')">Fatigue</button>
         <button onclick="nextQuestion('Other')">Other</button>`;
     } else if (answer === 'Headache') {
-        questionContainer.innerHTML = `
+        questions.innerHTML = `
             <p>Can you rate your headache on a scale of 1 to 10?</p>
             <button onclick="nextQuestion('1-3 (Mild)')">1-3 (Mild)</button>
             <button onclick="nextQuestion('4-6 (Moderate)')">4-6 (Moderate)</button>
             <button onclick="nextQuestion('7-10 (Severe)')">7-10 (Severe)</button>
         `;
         } else if (answer === '1-3 (Mild)') {
-        questionContainer.innerHTML = `
+        questions.innerHTML = `
             <p>How long have you been experiencing this headache?</p>
             <button onclick="nextQuestion('Less than a day')">Less than a day</button>
             <button onclick="nextQuestion('1-3 days')">1-3 days</button>
             <button onclick="nextQuestion('More than 3 days')">More than 3 days</button>
         `;
     } else if (answer === 'Less than a day') {
-        questionContainer.innerHTML = `
+        questions.innerHTML = `
             <p>What do you think triggered the headache?</p>
             <button onclick="nextQuestion('Stress')">Stress</button>
             <button onclick="nextQuestion('Lack of sleep')">Lack of sleep</button>
@@ -40,7 +41,7 @@ function nextQuestion(answer){
             <button onclick="nextQuestion('Other')">Other (please specify)</button>
         `;
     } else if (answer === 'Stress') {
-        questionContainer.innerHTML = `
+        questions.innerHTML = `
             <p>Are you experiencing any other symptoms?</p>
             <button onclick="nextQuestion('Nausea')">Nausea</button>
             <button onclick="nextQuestion('Sensitivity to light')">Sensitivity to light</button>
@@ -48,7 +49,7 @@ function nextQuestion(answer){
             <button onclick="nextQuestion('None')">None</button>
         `;
     } else if (answer === 'Nausea') {
-        questionContainer.innerHTML = `
+        questions.innerHTML = `
             <p>How would you describe your nausea?</p>
             <button onclick="nextQuestion('Mild')">Mild</button>
             <button onclick="nextQuestion('Moderate')">Moderate</button>
@@ -58,6 +59,31 @@ function nextQuestion(answer){
         // Show the doctor's results at the end 
         displayDoctorResults();
     }
+
+
+    function displayDoctorResults() {
+        const diagnosisContainer = document.getElementById("diagnosis-container");
+        const diagnosisResults = document.getElementById("diagnosis-results");
+    
+        // Example of diagnosis with probabilities
+        const diagnosis = `
+            <strong>Possible Diagnoses:</strong><br>
+            1. Tension Headache - 60%<br>
+            2. Migraines - 30%<br>
+            3. Dehydration-related Headache - 10%<br>
+        `;
+        diagnosisResults.innerHTML = diagnosis;
+    
+        // Show the doctor results section
+        diagnosisContainer.style.display = 'block';
+    }
+    
+    // Placeholder for filter results (advanced feature)
+    function filterResults() {
+        console.log("Filtering results based on doctor preferences...");
+        // Filtering logic can be implemented here based on diagnosis criteria
+    }
+    
 }
 
 
