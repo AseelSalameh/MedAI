@@ -1,3 +1,13 @@
+//start the questions with a button and a welcome page.
+
+function starts(){
+    const welcomePage = document.getElementById("welcomePage");
+welcomePage.style.display = "none"; 
+
+const questions = document.getElementById("questions");
+questions.style.display = "block"; 
+}
+
 // dynamic questions will be here
 
 let answers = []; //answers will be stored in this Array.
@@ -56,6 +66,8 @@ function nextQuestion(answer){
             <button onclick="nextQuestion('Severe')">Severe</button>
         `;
     } else {
+        questions.style.display = 'none';
+
         // Show the doctor's results at the end 
         displayDoctorResults();
     }

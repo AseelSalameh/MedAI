@@ -1,42 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    background-color: #f9f9f9;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
 }
 h1 {
     color: #333;
 }
 
+#questions{
+    background-color: white;
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 100%;
+    animation: fadeIn 1s forwards;
+}
+#questions p {
+    font-size: 26px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
 button {
-    margin: 10px;
-    padding: 10px;
-    font-size: 16px;
-    background-color: #4CAF50;
+    margin: 15px;
+    padding: 18px 35px;
+
+    font-size: 18px;
+    background-color: #3498db;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #2980b9;
 }
-
-input {
-    padding: 10px;
-    font-size: 16px;
-    margin-top: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-input[type="text"] {
-    width: 80%;
+button:disabled{
+    background-color: #bdc3c7;
+    cursor: not-allowed;
 }
 
 #diagnosis-container {
+    display: none;
     margin-top: 20px;
-    padding: 20px;
+    padding: 30px 50px;
     background-color: #f4f4f4;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+max-width: 500px;
+width: 100%;
+margin-top: 40px;
     border-radius: 10px;
     border: 1px solid #ccc;
+}
+
+#welcomePage{
+    background-color: white;
+    padding: 50px 60px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    transform: scale(0.9);
+    animation: scaleUp 1s forwars;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+#welcomePage h1{
+    font-size: 36px;
+font-weight: bold;
+color: #2c3e50;
+margin-bottom: 20px;
+
+}
+#welcomePage p {
+font-size: 18px;
+color: #34495e;
+margin-bottom: 30px;
+animation: fadeInText 1.5s ease-in-out forwards; /* Fade-in text animation */
+
+}
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#start {
+    background-color: #3498db;
+    color: white;
+    padding: 18px 35px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#start:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+}
+#diagnosis-container strong {
+    font-size: 22px;
+    color: #2c3e50;
+}
+
+#diagnosis-results {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #34495e;
 }
