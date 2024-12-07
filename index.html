@@ -1,1 +1,36 @@
-hello everybody how are you?
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedAI</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+<h1>Welcome to MedAI </h1>
+<!--  questions : -->
+    
+<div id="questions">
+    <!-- First question (fixed)-->
+    <p>What brings you in today?</p>
+    <!-- Multiple choice buttons -->
+    <button onclick="nextQuestion('New symptoms')">New symptoms</button>
+    <button onclick="nextQuestion('Follow-up on a previous condition')">Follow-up on a previous condition</button>
+    <button onclick="nextQuestion('Medication management')">Medication management</button>
+    <button onclick="nextQuestion('Other')">Other</button>
+</div>
+
+
+
+
+
+<div id="diagnosis-container" style="display:none;">
+    <h2>Doctor's Results:</h2>
+    <p id="diagnosis-results"></p>
+    <button onclick="filterResults()">Filter Results</button>
+</div>
+<script src="function.js"></script>
+</body>
+</html>
