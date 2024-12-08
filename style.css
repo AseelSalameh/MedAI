@@ -7,16 +7,17 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    background-color: #f0f4f8;
+    background-color: #f4f7fc;
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20x;
     min-height: 100vh;
+    flex-direction: column;
     text-align: center;
 }
-h1 {
-    color: #333;
-}
+
 
 #questions{
     background-color: white;
@@ -35,9 +36,9 @@ h1 {
 }
 button {
     margin: 15px;
-    padding: 18px 35px;
+    padding: 12px 25px;
 
-    font-size: 18px;
+    font-size: 1rem;
     background-color: #3498db;
     color: white;
     border: none;
@@ -69,9 +70,9 @@ margin-top: 40px;
 
 #welcomePage{
     background-color: white;
-    padding: 50px 60px;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     max-width: 500px;
     width: 100%;
     text-align: center;
@@ -97,21 +98,17 @@ color: #2c3e50;
 margin-bottom: 20px;
 
 }
+
+
 #welcomePage p {
 font-size: 18px;
 color: #34495e;
 margin-bottom: 30px;
-animation: fadeInText 1.5s ease-in-out forwards; /* Fade-in text animation */
+
 
 }
-@keyframes fadeInText {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
+
+
 #start {
     background-color: #3498db;
     color: white;

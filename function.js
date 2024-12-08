@@ -1,11 +1,11 @@
 //start the questions with a button and a welcome page.
 
 function starts(){
-    const welcomePage = document.getElementById("welcomePage");
-welcomePage.style.display = "none"; 
+    const welcomePage = document.getElementById('welcomePage');
+welcomePage.style.display = 'none'; 
 
-const questions = document.getElementById("questions");
-questions.style.display = "block"; 
+const questions = document.getElementById('questions');
+questions.style.display = 'block'; 
 }
 
 // dynamic questions will be here
