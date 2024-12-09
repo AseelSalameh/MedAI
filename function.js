@@ -66,37 +66,11 @@ function nextQuestion(answer){
             <button onclick="nextQuestion('Severe')">Severe</button>
         `;
     } else {
-        questions.style.display = 'none';
+        questions.style.display = 'none';}
 
-        // Show the doctor's results at the end 
-        displayDoctorResults();
+        
     }
 
 
-    function displayDoctorResults() {
-        const diagnosisContainer = document.getElementById("diagnosis-container");
-        const diagnosisResults = document.getElementById("diagnosis-results");
-    
-        // Example of diagnosis with probabilities
-        const diagnosis = `
-            <strong>Possible Diagnoses:</strong><br>
-            1. Tension Headache - 60%<br>
-            2. Migraines - 30%<br>
-            3. Dehydration-related Headache - 10%<br>
-        `;
-        diagnosisResults.innerHTML = diagnosis;
-    
-        // Show the doctor results section
-        diagnosisContainer.style.display = 'block';
-    }
-    
-    // Placeholder for filter results (advanced feature)
-    function filterResults() {
-        console.log("Filtering results based on doctor preferences...");
-        // Filtering logic can be implemented here based on diagnosis criteria
-    }
-    
-}
 
-
-
+    
