@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedAI Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login">
+        <h1> Login to MedAI</h1>
+        <form id="loginForm" onsubmit="handleLogin(event)">
+<div>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+</div>
+<div>
+    <label for="id">id:</label>
+    <input type="password" id="id" name="id" required>
+</div>
+<div>
+    <label for="Who">Login as:</label>
+    <select id="Who" name="Who">
+        <option value="patient">patient</option>
+    <option value="doctor">doctor</option>
+    </select>
+</div>
+        </form>
+    </div>
+    <button type="submit">Login</button>
+
+    <script src="login.js"></script>
+
+
+
+
+</body>
+</html>
