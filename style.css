@@ -1,57 +1,61 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f4f7fc;
+    margin: 0;
+    background-color: #f0f2f5;
     color: #333;
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 20x;
+    justify-content: center;
     min-height: 100vh;
-    flex-direction: column;
-    text-align: center;
 }
 
 
-#questions{
+#questions {
     background-color: white;
     padding: 40px 60px;
     border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
     max-width: 500px;
     width: 100%;
+    height: auto;
     animation: fadeIn 1s forwards;
+    text-align: center;
+    align-content: center;
 }
 #questions p {
-    font-size: 26px;
+    font-size: 30px;
     font-weight: bold;
-    color: #2c3e50;
+    color: #000000;
     margin-bottom: 30px;
+    text-align: center;
+    align-content: center;
 }
-button {
-    margin: 15px;
-    padding: 12px 25px;
 
+
+
+button {
+    margin: 25px;
+    padding: 12px 25px;
     font-size: 1rem;
-    background-color: #3498db;
-    color: white;
+    background-color: #11acf5;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    
+    align-self: center;
+
+
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #3589c1;
 }
 button:disabled{
-    background-color: #bdc3c7;
+    background-color: #a7c1d3;
     cursor: not-allowed;
 }
 
@@ -60,12 +64,13 @@ button:disabled{
     margin-top: 20px;
     padding: 30px 50px;
     background-color: #f4f4f4;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-max-width: 500px;
-width: 100%;
-margin-top: 40px;
+     max-width: 500px;
+     width: 100%;
+     margin-top: 40px;
+     height: auto;
     border-radius: 10px;
     border: 1px solid #ccc;
+    align-items: center;
 }
 
 #welcomePage{
@@ -94,9 +99,9 @@ margin-top: 40px;
 #welcomePage h1{
     font-size: 36px;
 font-weight: bold;
-color: #2c3e50;
+color: #0c0101;
 margin-bottom: 20px;
-
+height: auto;
 }
 
 
@@ -111,9 +116,9 @@ margin-bottom: 30px;
 
 
 #start {
-    background-color: #3498db;
+    background-color: #1fa0cb;
     color: white;
-    padding: 18px 35px;
+    padding: 18px 18px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -121,18 +126,65 @@ margin-bottom: 30px;
 }
 
 #start:hover {
-    background-color: #2980b9;
+    background-color: #262d31;
     transform: scale(1.1);
 }
-#diagnosis-container strong {
-    font-size: 22px;
-    color: #2c3e50;
+
+#diagnosisForm {
+margin: 50px 60px;
+padding: 60px;
+background-color: #ffffff;
+border-radius: 13px;
+font-weight: 200;
+}
+#diagnosisForm button {
+font-size: 19px;
+max-width: 400;
+width:100%;
 }
 
-#diagnosis-results {
-    margin-top: 20px;
+.login {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+font-size: larger;
+}
+label{
+    display: flex;
+    font-size: larger;
+    font-weight: 400;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+
+select{
+    gap: 20px;
     font-size: 20px;
-    color: #34495e;
 }
 
+input{
+    font-size: 20px;
+}
 
+#questions button{
+    background-color: #69c9e9;
+    margin-top: 10px;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+}
+
+#questions button:hover {
+    background-color: #0d8bbf;
+}

@@ -66,10 +66,10 @@ function nextQuestion(answer){
             <button onclick="nextQuestion('Severe')">Severe</button>
         `;
     } else {
-        questions.style.display = 'none';}
-
-        
+        questions.innerHTML='<strong>Thank You!</strong>';
+        ;}
     }
+
 
 
 
