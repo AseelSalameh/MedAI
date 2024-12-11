@@ -188,3 +188,11 @@ input{
 #questions button:hover {
     background-color: #0d8bbf;
 }
+
+#back button {
+    background-color: #4f5355;
+    color: white;
+padding: 5px 5px;
+width: min-content;
+display: flex;
+}

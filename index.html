@@ -8,6 +8,7 @@
 
 </head>
 <body>
+
     <div id="welcomePage">
 <h1>Welcome to MedAI</h1>
 <p>
@@ -20,7 +21,6 @@
     </div>
 
     <!--  questions : -->
-    
 <div id="questions" style="display: none;">
     <!-- First question (fixed)-->
     <p>What brings you in today?</p>
@@ -29,9 +29,11 @@
     <button onclick="nextQuestion('Follow-up on a previous condition')">Follow-up on a previous condition</button>
     <button onclick="nextQuestion('Medication management')">Medication management</button>
     <button onclick="nextQuestion('Other')">Other</button>
+    <div id="back">
+        <button onclick="goBack()" >Back</button>
+    </div>
+
 </div>
-
-
 
 
 
